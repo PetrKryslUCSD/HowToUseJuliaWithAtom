@@ -1,8 +1,5 @@
-# HowToUseAtomWithJulia
-
 ========================================================================
 -- Atom packages
-```
 uber-juno
 minimap
 auto-indent
@@ -11,39 +8,39 @@ simple-drag-drop-text
 highlight-line
 file-icons
 project-manager
-center-line
-```
 
 ========================================================================
 -- When  Atom would not start: run this
-  `atom --clear-window-state`
+  atom --clear-window-state
   in a command window
 
 ========================================================================
 -- in  keymap.cson
-```
-# support to-folder Dragon command
+  'atom-text-editor':
+    'ctrl-space': 'autocomplete-plus:activate'
 
-'atom-text-editor:not([mini])':
-  'ctrl-shift-alt-C': 'editor:copy-path'
+    'atom-text-editor:not([mini])':
+      'ctrl-shift-alt-C': 'editor:copy-path'
 
-'atom-text-editor':
-  'ctrl-shift-alt-I': 'editor:auto-indent'
-  'ctrl-shift-alt-w': 'editor:select-word'
+    'atom-text-editor':
+      'ctrl-shift-alt-I': 'editor:auto-indent'
+      'ctrl-shift-alt-w': 'editor:select-word'
 
-'body':
-  'ctrl-shift-0': 'window:toggle-dev-tools'
-```
+    'body':
+      'ctrl-shift-0': 'window:toggle-dev-tools'
+  '.platform-win32 .find-and-replace, .platform-linux .find-and-replace':
+    'alt-shift-ctrl-r': 'find-and-replace:replace-next'
+
 
 ========================================================================
   -- Atom platformio terminal:  set Auto run command to
-  `/c/Users/PetrKrysl/AppData/Local/Julia-0.7.0-DEV/bin/julia.exe`
+  /c/Users/PetrKrysl/AppData/Local/Julia-0.7.0-DEV/bin/julia.exe
   set Show override to
-  `C:\Program Files\Git\bin\bash.exe`
+  C:\Program Files\Git\bin\bash.exe
 
 ========================================================================
   -- Key bindings for Atom
-```
+
   'atom-text-editor':
     'ctrl-space': 'autocomplete-plus:activate'
 
@@ -52,11 +49,14 @@ center-line
 
   '.platform-linux atom-workspace, .platform-win32 atom-workspace':
     'alt-ctrl-shift-enter': 'platformio-ide-terminal:insert-selected-text'
-```
+
+		'atom-text-editor':
+		  'ctrl-alt-I': 'editor:auto-indent'
+
 ========================================================================
 -- Snippets:
 
-```
+
 '.source.julia':
   'forloop':
     'prefix': 'forloop'
@@ -89,10 +89,10 @@ end\n
 end\n
 using .${1:modulename}\n
 ${1:modulename}.test()\n'
-```
+
 ========================================================================
 - styles.less:
-```
+
 /*
  * Your Stylesheet
  *
@@ -104,23 +104,19 @@ ${1:modulename}.test()\n'
  * http://lesscss.org
  */
 
- // style the background and foreground colors on the atom-text-editor-element itself
- atom-text-editor {
-   color: hsl(50, 40%, 80%);
-   background-color: hsl(190, 10%, 12%);
- }
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  color: hsl(10, 10%, 60%);
+  background-color: hsl(190, 10%, 12%);
+}
 
- // style UI elements inside atom-text-editor
- atom-text-editor .cursor {
-   border-color: red;
- }
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  border-color: red;
+}
 
- atom-text-editor {
- 	.selection .region {
- 		background-color: rgba(0,80,120,0.9);
- 	}
- }
-```
-===============================================================================
-Start Atom within a Git bash:
-`start "" "%PROGRAMFILES%\Git\bin\sh.exe" --login -i -c "exec atom"`
+atom-text-editor {
+	.selection .region {
+		background-color: rgba(0,0,180,0.59);
+	}
+}

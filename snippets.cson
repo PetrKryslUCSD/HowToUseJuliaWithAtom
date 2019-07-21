@@ -1,0 +1,54 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.julia':
+  'forloop':
+    'prefix': 'forloop'
+    'body': 'for ${1:i} in ${2:1:length(${3:a})}\n
+	       ${0:${3:a}[${1:i}]}\n
+     end $1'
+  'comprehension':
+     'prefix': 'comprehension'
+     'body': '[${0:a[${1:idx}]} for ${1:idx} in ${2:collection}]'
+  'counter of':
+    'prefix': 'counterof'
+    'body': 'cnt${1:something}'
+  'number of':
+    'prefix': 'numberof'
+    'body': 'num${1:something}'
+  'doc string':
+    'prefix': 'thedocs'
+    'body': '"""\n    ${1:bar(x[, y])}\n\n# Arguments\n${0:Compute}\n"""'
+  'if else':
+    'prefix': 'ifelse'
+    'body': 'if ${1:condition}\n${2:whenconditionistrue}\nelse\n${2:whenconditionisfalse}\nend'
+  'set up test module':
+    'prefix': 'setuptestmodule'
+    'body': 'module ${1:modulename}\n
+using FinEtools\n
+using Test\n
+function test()\n
+	${0:body}\n
+end\n
+end\n
+using .${1:modulename}\n
+${1:modulename}.test()\n'
