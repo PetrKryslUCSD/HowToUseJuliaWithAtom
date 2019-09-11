@@ -1,11 +1,12 @@
 # HowToUseAtomWithJulia
 
-========================================================================
--- Atom packages
+## Atom packages
+
+Personally, I found these packages indispensable. Obviously, for programming with Julia, I install `uber-juno`. The others I find useful in general for working in Atom.
 ```
 uber-juno
 minimap
-auto-indent
+auto-indent (by griiin)
 split-diff
 simple-drag-drop-text
 highlight-line
@@ -14,13 +15,18 @@ project-manager
 center-line
 ```
 
-========================================================================
--- When  Atom would not start: run this
-  `atom --clear-window-state`
-  in a command window
+## When  Atom would not start
 
-========================================================================
--- in  keymap.cson
+When the editor wouldn't run, run this
+```
+atom --clear-window-state
+```
+in the command line.
+
+
+## Configuration of the  keymap
+
+In the file	`keymap.cson`, place the following configuration:
 ```
 # support to-folder Dragon command
 
@@ -30,32 +36,23 @@ center-line
 'atom-text-editor':
   'ctrl-shift-alt-I': 'editor:auto-indent'
   'ctrl-shift-alt-w': 'editor:select-word'
+  'ctrl-space': 'autocomplete-plus:activate'
 
 'body':
   'ctrl-shift-0': 'window:toggle-dev-tools'
-```
 
-========================================================================
-  -- Atom platformio terminal:  set Auto run command to
-  `/c/Users/PetrKrysl/AppData/Local/Julia-0.7.0-DEV/bin/julia.exe`
-  set Show override to
-  `C:\Program Files\Git\bin\bash.exe`
-
-========================================================================
-  -- Key bindings for Atom
-```
-  'atom-text-editor':
-    'ctrl-space': 'autocomplete-plus:activate'
-
-  '.platform-win32 .find-and-replace, .platform-linux .find-and-replace':
+'.platform-win32 .find-and-replace, .platform-linux .find-and-replace':
     'alt-shift-ctrl-r': 'find-and-replace:replace-next'
 
-  '.platform-linux atom-workspace, .platform-win32 atom-workspace':
+'.platform-linux atom-workspace, .platform-win32 atom-workspace':
     'alt-ctrl-shift-enter': 'platformio-ide-terminal:insert-selected-text'
-```
-========================================================================
--- Snippets:
 
+```
+
+
+## Snippets
+
+Create a few snippets:
 ```
 '.source.julia':
   'forloop':
@@ -90,7 +87,10 @@ end\n
 using .${1:modulename}\n
 ${1:modulename}.test()\n'
 ```
-========================================================================
+
+
+## Configure visual styles
+
 - styles.less:
 ```
 /*
@@ -121,6 +121,10 @@ ${1:modulename}.test()\n'
  	}
  }
 ```
-===============================================================================
-Start Atom within a Git bash:
-`start "" "%PROGRAMFILES%\Git\bin\sh.exe" --login -i -c "exec atom"`
+
+## How to start Atom so that we get a sane command line
+
+Start Atom within a Git bash. Create a batch file (for instance `atom.bat`) with the following contents:
+```
+start "" "%PROGRAMFILES%\Git\bin\sh.exe" --login -i -c "exec atom"
+```
