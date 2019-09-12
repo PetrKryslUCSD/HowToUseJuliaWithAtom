@@ -1,4 +1,4 @@
-# HowToUseAtomWithJulia
+# How to use Atom with Julia
 
 ## Atom packages
 
