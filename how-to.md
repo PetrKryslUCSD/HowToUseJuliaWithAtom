@@ -14,6 +14,9 @@ file-icons
 project-manager
 center-line
 ```
+```
+apm install uber-juno minimap auto-indent simple-drag-drop-text highlight-line file-icons project-manager center-line
+```
 
 ## When  Atom would not start
 
