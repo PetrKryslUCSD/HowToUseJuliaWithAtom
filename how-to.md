@@ -15,8 +15,9 @@ project-manager
 center-line
 ```
 ```
-apm install uber-juno minimap auto-indent simple-drag-drop-text highlight-line file-icons project-manager center-line
+apm install uber-juno minimap auto-indent simple-drag-drop-text highlight-line file-icons project-manager center-line tabnine
 ```
+Definitely grab the TabNine autocompleter! Worth its weight in gold (which would not be much, I realize, given that it is all bits; but you know what I mean).
 
 ## When  Atom would not start
 
