@@ -56,7 +56,7 @@ In the file	`keymap.cson`, place the following configuration:
 
 ### Snippets
 
-Create a few snippets:
+This will be found under *File/Snippets...*. Put this into the file at the bottom:
 ```
 '.source.julia':
   'forloop':
@@ -95,7 +95,8 @@ ${1:modulename}.test()\n'
 
 ### Configure visual styles
 
-- styles.less:
+This configuration may be found in  *File/Stylesheet...*. 
+Put this into the file:
 ```
 /*
  * Your Stylesheet
