@@ -3,6 +3,8 @@
 ## Atom packages
 
 Personally, I found these packages indispensable. Obviously, for programming with Julia, I install `uber-juno`. The others I find useful in general for working in Atom.
+
+This is the list:
 ```
 uber-juno
 minimap
@@ -13,22 +15,20 @@ highlight-line
 file-icons
 project-manager
 center-line
+tabnine
 ```
+And this is how it is really easily installed all in one go. In the terminal, type
 ```
 apm install uber-juno minimap auto-indent simple-drag-drop-text highlight-line file-icons project-manager center-line tabnine
 ```
+That should install all the packages requested.
+
 Definitely grab the TabNine autocompleter! Worth its weight in gold (which would not be much, I realize, given that it is all bits; but you know what I mean).
 
-## When  Atom would not start
-
-When the editor wouldn't run, run this
-```
-atom --clear-window-state
-```
-in the command line.
+## Configuration
 
 
-## Configuration of the  keymap
+### Configuration of the  keymap
 
 In the file	`keymap.cson`, place the following configuration:
 ```
@@ -54,7 +54,7 @@ In the file	`keymap.cson`, place the following configuration:
 ```
 
 
-## Snippets
+### Snippets
 
 Create a few snippets:
 ```
@@ -93,7 +93,7 @@ ${1:modulename}.test()\n'
 ```
 
 
-## Configure visual styles
+### Configure visual styles
 
 - styles.less:
 ```
@@ -126,9 +126,20 @@ ${1:modulename}.test()\n'
  }
 ```
 
-## How to start Atom so that we get a sane command line
+### How to start Atom so that we get a sane command line
 
 Start Atom within a Git bash. Create a batch file (for instance `atom.bat`) with the following contents:
 ```
 start "" "%PROGRAMFILES%\Git\bin\sh.exe" --login -i -c "exec atom"
 ```
+As an alternative, start Atom from the Git Bash by typing `atom`.
+
+## Troubleshooting
+
+When  Atom would not start
+
+When the editor wouldn't run, run this
+```
+atom --clear-window-state
+```
+in the command line.
