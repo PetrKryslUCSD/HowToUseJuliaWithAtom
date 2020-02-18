@@ -129,6 +129,15 @@ Put this into the file:
  }
 ```
 
+### Miscellanea
+
+Enable "Soft wrap" in the Editor settings.
+
+Install the "oceanic-next", "duotone-dark-syntax", "duotone-light-syntax" theme.
+```
+apm install oceanic-next duotone-dark-syntax duotone-light-syntax
+```
+
 ### How to start Atom so that we get a sane command line
 
 Start Atom within a Git bash. Create a batch file (for instance `atom.bat`) with the following contents:
