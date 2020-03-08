@@ -19,7 +19,7 @@ project-manager
 center-line
 tabnine
 ```
-And this is how it is really easily installed all in one go. In the terminal, type
+And this is how it is really easily installed all in one go. In the CMD window (not the bash terminal), type
 ```
 apm install uber-juno minimap auto-indent simple-drag-drop-text highlight-line file-icons project-manager center-line tabnine
 ```
