@@ -25,7 +25,7 @@
     'prefix': 'forloop'
     'body': 'for ${1:i} in ${2:1:length(${3:a})}\n
 	       ${0:${3:a}[${1:i}]}\n
-     end $1'
+     end # $1'
   'comprehension':
      'prefix': 'comprehension'
      'body': '[${0:a[${1:idx}]} for ${1:idx} in ${2:collection}]'
@@ -41,6 +41,9 @@
   'if else':
     'prefix': 'ifelse'
     'body': 'if ${1:condition}\n${2:whenconditionistrue}\nelse\n${2:whenconditionisfalse}\nend'
+  'if':
+    'prefix': 'onlyif'
+    'body': 'if ${1:condition}\n${2:whenconditionistrue}\nend'
   'set up test module':
     'prefix': 'setuptestmodule'
     'body': 'module ${1:modulename}\n
